@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "FS.UA helper",
+  "version": "0.1.0",
+  "description": "Watch FS.UA without hassle.",
+  "homepage_url": "https://chrome.google.com/webstore/detail/",
+  "minimum_chrome_version": "22",
+  "content_scripts": [
+    {
+      "matches": ["http://fs.to/view/*"],
+      "js": ["contentscript.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
