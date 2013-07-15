@@ -1,0 +1,3 @@
+[submodule "src/Playr"]
+	path = src/Playr
+	url = https://github.com/Vanuan/Playr.git
