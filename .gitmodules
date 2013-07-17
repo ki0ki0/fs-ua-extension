@@ -1,6 +1,3 @@
-[submodule "src/Playr"]
-	path = src/Playr
-	url = https://github.com/Vanuan/Playr.git
 [submodule "src/shyplayer"]
 	path = src/shyplayer
 	url = git@github.com:Vanuan/shyplayer.git
