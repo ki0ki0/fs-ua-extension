@@ -2,9 +2,8 @@
   'use strict';
 
   function BetterFsPlayer() {
-    function createNewPlayer(width, height, mp4link) {
-      var newPlayer = document.createElement("video");
-      var source = document.createElement("source");
+    function createNewPlayer(width, height) {
+      var newPlayer = document.createElement("div");
       source.src = mp4link;
       source.type = "video/mp4";
       newPlayer.style.width = width;
@@ -32,18 +31,15 @@
       var width = player.style.width;
       var height = player.style.height;
       var playerContainer = player.parentNode;
-      var newPlayer = createNewPlayer(width, height, mp4link);
-      newPlayer.className = "playr_video";
-      playerContainer.appendChild(newPlayer);
-      return newPlayer;
+      var newPlayerContainer = document.createElement("div");
+      playerContainer.appendChild(newPlayerContainer);
+      ShyPlayer(newPlayerContainer, [mp4link], width, height);
     }
 
     function replacePlayer() {
       var mp4link = FS_FLOWPLAYER_CONFIG.playlist[0].url;
-      var newPlayer = insertNewPlayer(mp4link);
+      insertNewPlayer(mp4link);
       removeOldPlayer();
-      var video_objects = [];
-      video_objects.push(new Playr(0, newPlayer));
     }
 
     replacePlayer();

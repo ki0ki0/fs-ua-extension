@@ -8,8 +8,8 @@
   "content_scripts": [
     {
       "matches": ["http://fs.to/view/*"],
-      "js": ["Playr/playr.js", "fsplayer.js", "contentscript.js"],
-      "css": ["Playr/playr.css"],
+      "js": ["shyplayer/shyplayer.js", "fsplayer.js", "contentscript.js"],
+      "css": ["shyplayer/shyplayer.css"],
       "run_at": "document_end"
     }
   ]
